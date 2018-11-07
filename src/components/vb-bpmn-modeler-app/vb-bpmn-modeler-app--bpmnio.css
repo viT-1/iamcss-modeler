@@ -1,0 +1,20 @@
+/* В селекторах CSS-правил обязательно должна быть привязка к схеме!
+Без привязки к теме, только по блок-элементу допускается работать в js-коде (querySelector) */
+
+:root {
+    --appPanelHeight: 100px;
+}
+
+*[vb-bpmn-modeler-app *= "-bpmnio-"] {
+    display: flex;
+    flex-direction: column;
+}
+
+*[vb-bpmn-modeler-app__panel *= "-bpmnio-"] {
+    height: var(--appPanelHeight);
+}
+
+*[vb-bpmn-modeler-app__diagram-root *= "-bpmnio-"] {
+    background: yellow;
+    height: calc(100% - var(--appPanelHeight));
+}
