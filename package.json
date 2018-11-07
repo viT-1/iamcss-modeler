@@ -1,0 +1,70 @@
+{
+    "name": "bpmn-js-example-commonjs",
+    "version": "0.0.0",
+    "description": "An example how to bundle an app using bpmn-js for the browser",
+    "main": "src/index.js",
+    "scripts": {
+        "build": "webpack --mode production",
+        "bundle": "webpack --mode development",
+        "bundle:watch": "webpack --mode development --watch",
+        "postbundle": "npm run service",
+        "dev": "npm run bundle:watch",
+        "service" : "node dist/express-bpmn-service.bundled.js",
+        "test": "jest || exit 0",
+        "clear_jest": "jest --clearCache"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/bpmn-io/bpmn-js-examples"
+    },
+    "keywords": [
+        "bpmnjs-example"
+    ],
+    "author": {
+        "name": "Vitaly Pinchuk",
+        "url": "https://github.com/viT-1/"
+    },
+    "contributors": [
+        {
+            "name": "bpmn.io contributors",
+            "url": "https://github.com/bpmn-io"
+        }
+    ],
+    "license": "MIT",
+    "devDependencies": {
+        "axios": "^0.18.0",
+        "vuex": "^3.0.1",
+
+        "express": "^4.16.3",
+        "webpack-node-externals": "^1.7.2",
+
+        "html-webpack-plugin": "^3.2.0",
+
+        "css-loader": "0.28.11",
+        "mini-css-extract-plugin": "^0.4.0",
+            "url-loader": "^1.0.1",
+                "file-loader": "^1.1.11",
+
+        "raw-loader": "^0.5.1",
+        "vue-loader": "^15.2.6",
+            "vue-template-compiler": "^2.5.17",
+        
+        "@vue/test-utils": "^1.0.0-beta.11",
+        "jest": "^23.5.0",
+            "vue-jest": "^2.6.0",
+            "babel-jest": "^23.4.2",
+                "babel-preset-env": "^1.7.0",
+
+        "clean-webpack-plugin": "^0.1.19",
+        "webpack": "^4.16.3",
+        "webpack-cli": "^3.1.0"
+    },
+    "dependencies": {
+        "bpmn-js": "^2.4.1",
+        "bpmn-js-properties-panel": "^0.26.1",
+        "diagram-js": "^1.0.0",
+        "diagram-js-minimap": "^1.2.2",
+        "jquery": "^3.3.1",
+        "vue": "^2.5.16"
+    }
+}
