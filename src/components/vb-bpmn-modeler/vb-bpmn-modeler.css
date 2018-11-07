@@ -1,0 +1,88 @@
+/* Тему по умолчанию можно сменить в настройках модуля iAMcss, сейчас bpmnio, в принципе возможна другая, лежащая рядом */
+@import './vb-bpmn-modeler--bpmnio.css';
+  
+body, html {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+  
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+  
+a.in-actionPanel.btnBpmn:link {
+    text-decoration: none;
+}
+
+.content{
+    width: 100%;
+    display: flex;
+}
+  
+.content > .message {
+    width: 100%;
+    height: 100%;
+
+    text-align: center;
+    display: table;
+  
+    font-size: 16px;
+    color: #111;
+}
+  
+.content > .message .note {
+    vertical-align: middle;
+    text-align: center;
+    display: table-cell;
+}
+  
+.content .error .details {
+    max-width: 500px;
+    font-size: 12px;
+    margin: 20px auto;
+    text-align: left;
+}
+  
+.content .error pre {
+    border: solid 1px #CCC;
+    background: #EEE;
+    padding: 10px;
+}
+  
+.content:not(.with-error) .error
+, .content.with-error .intro
+, .content.with-diagram .intro {
+    display: none;
+}
+  
+.actionPanel {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+  
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+  
+.actionPanel > li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.in-actionPanel.btnBpmn {
+    display: inline-block;
+    padding: 5px;
+
+    border: solid 1px #666;
+    background: #DDD;
+    cursor: pointer;
+}
+  
+a.in-actionPanel.btnBpmn {
+    opacity: 0.3;
+}
+  
+a.in-actionPanel.btnBpmn.-active- {
+    opacity: 1.0;
+}
